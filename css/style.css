@@ -17,6 +17,7 @@ h1{
     text-align: center;
     color: #fff;
     margin-bottom: 2rem;
+    font-size: 3rem;
 
 }
 
@@ -54,7 +55,7 @@ h3{
     z-index: 2;
 }
 .dagen li {
-    font-size: 0.7rem; /* Pas de grootte van de tekst aan naar wens */
+    font-size: 0.7rem; 
 }
 
 #vorige, #volgende {
@@ -65,3 +66,56 @@ h3{
     background: transparent;
     cursor: pointer;
 }
+
+#vorige::before, #volgende::before {
+    content: '';
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-style: solid;
+    border-width: 0.25em 0.25em 0 0;
+    border-radius: #ccc;
+    border-color: #ccc;
+}
+
+#vorige::before{
+    transform: translate(-50%, -50%)rotate(45deg);
+}
+#volgende::before{
+    transform: translate(-50%, -50%)rotate(-135deg);
+}
+
+#vorige:hover::before,
+#volgende:hover::before {
+    border-color: #000;
+}
+
+.dagen{
+    font-weight: 600;
+}
+
+.datums li.vandaag{
+    color: #fff
+}
+
+.datums li.vandaag::before {
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #000;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.dagen li.inactive{
+    color: #ccc;
+}
+
+
+
