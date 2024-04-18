@@ -1,0 +1,173 @@
+:root{
+    --dark-text: #f8fbff;
+    --light-body: #f3f8fe;
+   --font-family: consolas;
+   --light-main: #fdfdfd;
+   --light-second: #c3c2c8;
+   --light-text: #151426;
+   --light-btn: #9796f0;
+   --blue: #0000ff;
+   --white: #fff;
+   --shadow: rgba(100, 100, 111, 0.2, 0rem, 0.7rem, 2.9rem, 0rem)
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    place-items: center;
+    font-family: var(--font-family);
+    background: linear-gradient(to right, #9796f0, #fbc7d4);
+    overflow: hidden;
+}
+
+.container{
+    width: max-content;
+    height: max-content;
+    position: relative;
+    display: flex;
+    padding: 2% 0rem 0rem 0rem;
+    justify-content: center;
+    top: 10%;
+    right: 0%;
+    height: 100%;
+    width: 100%;
+}
+
+.calendar{
+    height: 610rem;
+    width: max-content;
+    background-color: white;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    padding: 3rem 5rem 0rem 5rem;
+    box-shadow: var(--shadow);
+}
+
+.calendar-header{
+    background: #9796f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    color: var(--white);
+    padding: 1rem;
+}
+
+.calendar-body{
+    pad: 1rem;
+}
+
+.calendar-week-days{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    font-weight: 600;
+    cursor: pointer;
+    color: rgb(104, 104, 104);
+}
+
+.calnedar-week-days div:hover{
+    color: black;
+    transform: scale(1.2);
+    transition: all .2s ease-in-out;
+}
+
+.calendar-week-days div{
+    display: grid;
+    place-items: center;
+    color: vr(--bg-second);
+    height: 5rem
+}
+
+.calendar-days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.2rem;
+    color: var(--color-txt);
+}
+
+.calendar-days div{
+    width: 3.7rem;
+    height: 3.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    position: relative;
+    cursor: pointer;
+    animation: to-top 1s forwards;
+}
+
+.month-picker{
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.month-picker:hover{
+    background-color: var(--color-hover);
+}
+
+.month-picker:hover{
+    color: var(--color-txt);
+}
+
+.year-picker{
+    display: flex;
+    align-items: center;
+}
+
+.year-change{
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin: 0rem 1rem;
+    cursor: pointer;
+}
+
+.year-change:hover{
+    background-color: var(--light-btn);
+    transition: all .2s ease-in-out;
+    transform: scale(1.12);
+}
+
+.year-change:hover pre{
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#year:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.calendar-days div span{
+    position: absolute;
+}
+
+.calendar-days div:hover{
+    transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+    background-color: #fbc7d4;
+    border-radius: 20%;
+    color: var(--dark-text);
+}
+
+.month_list{
+    position: relative;
+    left: 0;
+    top: -5rem;
+    background-color: #ebebeb;
+    color: var(--light-text);
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 0.5rem;
+    border-radius: 2rem;
+}
