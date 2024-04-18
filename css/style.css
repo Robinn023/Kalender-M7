@@ -171,3 +171,97 @@ html, body{
     gap: 0.5rem;
     border-radius: 2rem;
 }
+
+.month-list > div{
+    display: grid;
+    place-content: center;
+    margin: 0.5rem 1rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.month-list > div > div{
+    border-radius:1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.month-list > div > div:hover{
+    background-color: var(--light-btn);
+    color: var(--dark-text);
+    transform: scale(0.9);
+    transition: all 0.2s ease-in-out;
+}
+
+.month-list .show{
+    visibility: visible;
+    pointer-events: visible;
+    transition: 0.6 ease-in-out;
+    animation: to-left .71s forwards;
+}
+
+.month-list.hideonce{
+    visibility: hidden;
+}
+
+.month-list.hide{
+    animation: to-right 1s forwards;
+    visibility: none;
+    pointer-events: none;
+}
+
+.date-time-formate{
+    width: max-content;
+    height: max-content;
+    font-family: Dabai Light, century Gothic;
+    position: relative;
+    top: 14rem;
+    justify-content: center;
+}
+
+.day-text-formate{
+    font-family: Microsoft JengHei UI;
+    font-size: 1.4rem;
+    padding-right: 5%;
+    border-right: 0.3rem solid #9796f0;
+    position: absolute;
+    left: -1rem;
+}
+
+.date-time-value{
+    display: block;
+    height: max-content;
+    width: max-content;
+    position: relative;
+    left: 40%;
+    top: -1.8rem;
+    text-align: center;
+}
+
+.time-formate{
+    font-size: 1.5rem;
+}
+
+.time-formate.hideTime{
+    animation: hidetime 1.5s forwards;
+}
+
+.day-textformate.hidetime{
+    animation: hidetime 1.5s forwards;
+}
+
+.date-formate.hideTime{
+    animation : hidetime 1.5s forwards;
+}
+
+.day-text-formate.showtime{
+    animation: showtime 1s forwards;
+}
+
+.time-formate.showtime{
+    animation: showtime 1s forwards;
+}
+
+.date-formate.showtime{
+    animation: showtime 1s forwards;
+}
+
